@@ -1,7 +1,8 @@
-# challenge_1
+# challenge_1
 desafio de alura de un deco/encodificador basico en html
 ___ 
-###requrimientos
+
+##requrimientos
 
 La letra "e" es convertida para "enter"  
 La letra "i" es convertida para "imes"  
@@ -17,6 +18,8 @@ Requisitos:
 Por ejemplo:  
 "gato" => "gaitober"  
 gaitober" => "gato"
+
+___
 
 La página debe tener campos para
 inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones.
