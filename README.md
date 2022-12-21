@@ -2,7 +2,7 @@
 > desafio de alura de un deco/encodificador basico en html
 ___ 
 
-## requrimientos
+## requerimientos
 
 La letra "e" es convertida para "enter"  
 La letra "i" es convertida para "imes"  
