@@ -1,3 +1,53 @@
+@charset "UTF-8";
 body {
-  background-color: aquamarine;
+  background-color: #e5e5e5;
+}
+
+.logoAlura {
+  position: absolute;
+  left: 48px;
+  top: 44px;
+}
+
+.texto {
+  position: absolute;
+  border: none;
+  background-color: #c6c6c6;
+  font-family: "Inter";
+  width: 577px;
+  height: 48px;
+  left: 240px;
+  top: 168px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  -webkit-animation-duration: 0s;
+          animation-duration: 0s;
+}
+.texto::-moz-placeholder {
+  color: #0a3871;
+}
+.texto:-ms-input-placeholder {
+  color: #0a3871;
+}
+.texto::placeholder {
+  color: #0a3871;
+}
+
+.sidebar {
+  display: block;
+  border-radius: 32px;
+  position: absolute;
+  background-color: aqua;
+  right: 0;
+  top: 0;
+  margin: 40px;
+  height: 90%;
+  width: 30%;
+}
+.sidebar .muñecoAlura {
+  position: relative;
+  bottom: 0;
+  right: 0;
 }/*# sourceMappingURL=style.css.map */
