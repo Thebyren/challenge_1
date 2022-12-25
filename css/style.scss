@@ -2,60 +2,74 @@
   padding: 0%;
   margin: 0%;
 }
+
+$sombra:10px  10px 0 0 #000;
 main {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+img.logoAlura{
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
 }
 .wrapper {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-template-rows: repeat(4, 25vh);
-
-  background: rgb(60, 175, 60);
-  height: 100vh;
-  width: 100%;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25vh);
+    
+    background: rgb(60, 175, 60);
+    height: 100vh;
+    width: 100%;
 }
 .logoAlura {
-  position: fixed;
-  top: 44px;
-  left: 48px;
+    position: fixed;
+    top: 44px;
+    left: 48px;
+    box-shadow: $sombra;
+    
 }
-form {
-  grid-column: 1/3;
-  grid-row: 2/3;
-  justify-self: center;
-  align-self: center;
-  transition: all;
-  transition-duration: 2s;
-  animation-duration: 2s;
-  animation: all;
+.en-decriptacion{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    align-content: start;
+    transition: all;
+    transition-duration: 2s;
+    animation-duration: 2s;
+    animation: all;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
 }
-.texto , .textoDesplegado {
-  &::placeholder {
+.texto , .textoDesplegado , .encriptacion{
+    &::placeholder {
     color: rgb(96, 211, 96);
-  }
-  color: rgb(219, 243, 219);
-  padding: 1rem;
+}
+box-shadow: $sombra;
+color: rgb(219, 243, 219);
+padding: 1rem;
   text-align: left;
-  width: 300px;
+  width: 30vw;
+  max-height: 20vw;
+  max-width: 300px;
   font-size: 2em;
   margin: 10px 0 0 10px;
   background-color: rgb(35, 114, 35);
   border: none;
+  display: block;
   border-radius: 1vw;
+  resize: vertical;
   &:focus{
     border: none;
   }
 }
 .textoDesplegado {
     height: 10em;
-    resize: vertical;
 }
 
 .botones {
+    
   margin: 5%;
   background-color: rgba(35, 114, 35, 0.3);
   grid-column: 1/4;
@@ -132,20 +146,21 @@ form {
   }
   .botones {
     grid-column: 1/5;
-    grid-row: 2;
+    grid-row: 3;
     background-color: transparent;
     align-items: end;
     margin-bottom: 0;
   }
   .aclaraciones {
     grid-column: 1/5;
-    grid-row: 2;
+    grid-row: 3;
     align-self: center;
     margin: 10px;
   }
   form {
-    display: block;
+    display: inline-block;
     grid-column: 1/-1;
     grid-row: 1/4;
-  }
+}
+
 }

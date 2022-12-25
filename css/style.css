@@ -10,6 +10,10 @@ main {
   flex-direction: column;
 }
 
+img.logoAlura {
+  filter: drop-shadow(0px 3px 3px rgb(0, 0, 0));
+}
+
 .wrapper {
   flex: 1;
   display: grid;
@@ -24,48 +28,55 @@ main {
   position: fixed;
   top: 44px;
   left: 48px;
+  box-shadow: 10px 10px 0 0 #000;
 }
 
-form {
-  grid-column: 1/3;
+.en-decriptacion {
+  grid-column: 1/4;
   grid-row: 2/3;
-  justify-self: center;
-  align-self: center;
+  align-content: start;
   transition: all;
   transition-duration: 2s;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation: all;
           animation: all;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
 }
 
-.texto, .textoDesplegado {
+.texto, .textoDesplegado, .encriptacion {
+  box-shadow: 10px 10px 0 0 #000;
   color: rgb(219, 243, 219);
   padding: 1rem;
   text-align: left;
-  width: 300px;
+  width: 30vw;
+  max-height: 20vw;
+  max-width: 300px;
   font-size: 2em;
   margin: 10px 0 0 10px;
   background-color: rgb(35, 114, 35);
   border: none;
+  display: block;
   border-radius: 1vw;
+  resize: vertical;
 }
-.texto::-moz-placeholder, .textoDesplegado::-moz-placeholder {
+.texto::-moz-placeholder, .textoDesplegado::-moz-placeholder, .encriptacion::-moz-placeholder {
   color: rgb(96, 211, 96);
 }
-.texto:-ms-input-placeholder, .textoDesplegado:-ms-input-placeholder {
+.texto:-ms-input-placeholder, .textoDesplegado:-ms-input-placeholder, .encriptacion:-ms-input-placeholder {
   color: rgb(96, 211, 96);
 }
-.texto::placeholder, .textoDesplegado::placeholder {
+.texto::placeholder, .textoDesplegado::placeholder, .encriptacion::placeholder {
   color: rgb(96, 211, 96);
 }
-.texto:focus, .textoDesplegado:focus {
+.texto:focus, .textoDesplegado:focus, .encriptacion:focus {
   border: none;
 }
 
 .textoDesplegado {
   height: 10em;
-  resize: vertical;
 }
 
 .botones {
@@ -149,19 +160,19 @@ form {
   }
   .botones {
     grid-column: 1/5;
-    grid-row: 2;
+    grid-row: 3;
     background-color: transparent;
     align-items: end;
     margin-bottom: 0;
   }
   .aclaraciones {
     grid-column: 1/5;
-    grid-row: 2;
+    grid-row: 3;
     align-self: center;
     margin: 10px;
   }
   form {
-    display: block;
+    display: inline-block;
     grid-column: 1/-1;
     grid-row: 1/4;
   }

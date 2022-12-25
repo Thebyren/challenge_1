@@ -4,19 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css_scss/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="javascript/jquery.js" type="text/javascript"></script>
     <script src="javascript/js.js"></script>
     <title>encriptador & decriptador</title>
   </head>
+
   <body>
     <main class="wrapper">
       <img src="./contenido/Vector.svg" class="logoAlura" />
-      <form>
-        <textarea class="texto" placeholder="inserte su texto aqui" ></textarea>
-      </form>
+      <section class="en-decriptacion">
+        <form>
+          <textarea
+            class="texto"
+            placeholder="inserte su texto aqui"
+          ></textarea>
+        </form>
+        <div class="contenedorTextoEncriptado">
+          <textarea
+            class="encriptacion"
+            placeholder="inserte su texto aqui"
+          ></textarea>
+        </div>
+      </section>
       <div class="aclaraciones">
-        <img src="./contenido/aclaraciones.svg" height="16px">
+        <img src="./contenido/aclaraciones.svg" height="16px" />
         <p class="textoAclaraciones">solo letras minusculas y sin acentos</p>
       </div>
       <div class="sidebar"></div>
