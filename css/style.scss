@@ -1,0 +1,166 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+$sombra:10px  10px 0 0 #000;
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+img.logoAlura{
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
+}
+.wrapper {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25vh);
+    
+    background: rgb(60, 175, 60);
+    height: 100vh;
+    width: 100%;
+}
+.logoAlura {
+    position: fixed;
+    top: 44px;
+    left: 48px;
+    box-shadow: $sombra;
+    
+}
+.en-decriptacion{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    align-content: start;
+    transition: all;
+    transition-duration: 2s;
+    animation-duration: 2s;
+    animation: all;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+.texto , .textoDesplegado , .encriptacion{
+    &::placeholder {
+    color: rgb(96, 211, 96);
+}
+box-shadow: $sombra;
+color: rgb(219, 243, 219);
+padding: 1rem;
+  text-align: left;
+  width: 30vw;
+  max-height: 20vw;
+  max-width: 300px;
+  font-size: 2em;
+  margin: 10px 0 0 10px;
+  background-color: rgb(35, 114, 35);
+  border: none;
+  display: block;
+  border-radius: 1vw;
+  resize: vertical;
+  &:focus{
+    border: none;
+  }
+}
+.textoDesplegado {
+    height: 10em;
+}
+
+.botones {
+    
+  margin: 5%;
+  background-color: rgba(35, 114, 35, 0.3);
+  grid-column: 1/4;
+  grid-row: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  .desencriptar,
+  .encriptar {
+    padding: 0.3em;
+    border-radius: 5vw;
+    font-size: 200%;
+    min-width: 150px;
+    width: 200px;
+  }
+  .encriptar {
+    background-color: whitesmoke;
+    &:hover{background-color: rgb(212, 212, 212);}
+    color: rgb(35, 114, 35);
+  }
+  .desencriptar {
+    background-color: rgb(35, 114, 35);
+    &:hover{background-color: rgb(25, 83, 25);}
+    color: whitesmoke;
+  }
+}
+.aclaraciones {
+  grid-column: 1/4;
+  grid-row: 4;
+  display: flex;
+  justify-content: center;
+  align-self: start;
+  gap: 10px;
+  .textoAclaraciones {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+}
+.sidebar {
+  background-color: rgb(35, 114, 35);
+  width: auto;
+  height: auto;
+  grid-column: 4;
+  grid-row: 1/5;
+  margin: 5%;
+}
+
+/*_______________________media_querys__________________________*/
+
+@media only screen and (max-width: 428px) {
+  main {
+    min-height: 200vh;
+  }
+  .logoAlura {
+    top: 12px;
+    left: 14px;
+    display: block;
+    position: absolute;
+    margin: 10px;
+  }
+  .wrapper {
+    grid-template-rows: repeat(8, 25vh);
+  }
+
+  .sidebar {
+    grid-column: 1/5;
+    grid-row: 4/6;
+  }
+  .botones {
+    grid-column: 1/5;
+    grid-row: 3;
+    background-color: transparent;
+    align-items: end;
+    margin-bottom: 0;
+  }
+  .aclaraciones {
+    grid-column: 1/5;
+    grid-row: 3;
+    align-self: center;
+    margin: 10px;
+  }
+  form {
+    display: inline-block;
+    grid-column: 1/-1;
+    grid-row: 1/4;
+}
+
+}
