@@ -31,15 +31,18 @@ form {
   grid-row: 2/3;
   justify-self: center;
   align-self: center;
-  color: floralwhite;
+  transition: all;
+  transition-duration: 2s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation: all;
+          animation: all;
 }
 
-.texto {
+.texto, .textoDesplegado {
   color: rgb(219, 243, 219);
   padding: 1rem;
   text-align: left;
-  height: 10em;
-  resize: vertical;
   width: 300px;
   font-size: 2em;
   margin: 10px 0 0 10px;
@@ -47,14 +50,22 @@ form {
   border: none;
   border-radius: 1vw;
 }
-.texto::-moz-placeholder {
+.texto::-moz-placeholder, .textoDesplegado::-moz-placeholder {
   color: rgb(96, 211, 96);
 }
-.texto:-ms-input-placeholder {
+.texto:-ms-input-placeholder, .textoDesplegado:-ms-input-placeholder {
   color: rgb(96, 211, 96);
 }
-.texto::placeholder {
+.texto::placeholder, .textoDesplegado::placeholder {
   color: rgb(96, 211, 96);
+}
+.texto:focus, .textoDesplegado:focus {
+  border: none;
+}
+
+.textoDesplegado {
+  height: 10em;
+  resize: vertical;
 }
 
 .botones {
@@ -67,7 +78,8 @@ form {
   justify-content: center;
   gap: 20px;
 }
-.botones .desencriptar, .botones .encriptar {
+.botones .desencriptar,
+.botones .encriptar {
   padding: 0.3em;
   border-radius: 5vw;
   font-size: 200%;
@@ -78,9 +90,15 @@ form {
   background-color: whitesmoke;
   color: rgb(35, 114, 35);
 }
+.botones .encriptar:hover {
+  background-color: rgb(212, 212, 212);
+}
 .botones .desencriptar {
   background-color: rgb(35, 114, 35);
   color: whitesmoke;
+}
+.botones .desencriptar:hover {
+  background-color: rgb(25, 83, 25);
 }
 
 .aclaraciones {
