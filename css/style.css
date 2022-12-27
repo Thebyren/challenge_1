@@ -11,7 +11,7 @@ main {
 }
 
 img.logoAlura {
-  filter: drop-shadow(0px 3px 3px rgb(0, 0, 0));
+  filter: drop-shadow(5px 5px 0px rgb(0, 0, 0));
 }
 
 .wrapper {
@@ -28,25 +28,23 @@ img.logoAlura {
   position: fixed;
   top: 44px;
   left: 48px;
-  box-shadow: 10px 10px 0 0 #000;
 }
 
 .en-decriptacion {
   grid-column: 1/4;
   grid-row: 2/3;
   align-content: start;
-  transition: all;
-  transition-duration: 2s;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation: all;
-          animation: all;
   display: flex;
   flex-direction: row;
   align-content: space-between;
 }
 
-.texto, .textoDesplegado, .encriptacion {
+.texto,
+.textoDesplegado,
+.encriptacion {
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
   box-shadow: 10px 10px 0 0 #000;
   color: rgb(219, 243, 219);
   padding: 1rem;
@@ -68,10 +66,14 @@ img.logoAlura {
 .texto:-ms-input-placeholder, .textoDesplegado:-ms-input-placeholder, .encriptacion:-ms-input-placeholder {
   color: rgb(96, 211, 96);
 }
-.texto::placeholder, .textoDesplegado::placeholder, .encriptacion::placeholder {
+.texto::placeholder,
+.textoDesplegado::placeholder,
+.encriptacion::placeholder {
   color: rgb(96, 211, 96);
 }
-.texto:focus, .textoDesplegado:focus, .encriptacion:focus {
+.texto:focus,
+.textoDesplegado:focus,
+.encriptacion:focus {
   border: none;
 }
 
@@ -81,7 +83,6 @@ img.logoAlura {
 
 .botones {
   margin: 5%;
-  background-color: rgba(35, 114, 35, 0.3);
   grid-column: 1/4;
   grid-row: 4;
   display: flex;
@@ -96,6 +97,12 @@ img.logoAlura {
   font-size: 200%;
   min-width: 150px;
   width: 200px;
+  box-shadow: 5px 5px 0px rgb(0, 0, 0);
+}
+.botones .desencriptar:hover,
+.botones .encriptar:hover {
+  box-shadow: 2px 2px 0px rgb(0, 0, 0);
+  transform: translate(3px, 3px);
 }
 .botones .encriptar {
   background-color: whitesmoke;
@@ -119,6 +126,8 @@ img.logoAlura {
   justify-content: center;
   align-self: start;
   gap: 10px;
+  position: relative;
+  top: 10px;
 }
 .aclaraciones .textoAclaraciones {
   display: inline-block;
@@ -129,6 +138,10 @@ img.logoAlura {
   padding-right: 10px;
   position: relative;
 }
+.aclaracionesNone img,
+.aclaracionesNone p {
+  content: none;
+}
 
 .sidebar {
   background-color: rgb(35, 114, 35);
@@ -137,6 +150,7 @@ img.logoAlura {
   grid-column: 4;
   grid-row: 1/5;
   margin: 5%;
+  box-shadow: 10px 10px 0 0 #000;
 }
 
 /*_______________________media_querys__________________________*/
@@ -153,6 +167,14 @@ img.logoAlura {
   }
   .wrapper {
     grid-template-rows: repeat(8, 25vh);
+  }
+  .texto,
+.encriptacion {
+    height: 100%;
+  }
+  .texto :focus,
+.encriptacion :focus {
+    height: 500px !important;
   }
   .sidebar {
     grid-column: 1/5;

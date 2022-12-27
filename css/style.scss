@@ -3,52 +3,49 @@
   margin: 0%;
 }
 
-$sombra:10px  10px 0 0 #000;
+$sombra: 10px 10px 0 0 #000;
 main {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-img.logoAlura{
-  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
+img.logoAlura {
+  filter: drop-shadow(5px 5px 0px rgba(0, 0, 0, 1));
 }
 .wrapper {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(4, 25vh);
-    
-    background: rgb(60, 175, 60);
-    height: 100vh;
-    width: 100%;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(4, 25vh);
+
+  background: rgb(60, 175, 60);
+  height: 100vh;
+  width: 100%;
 }
 .logoAlura {
-    position: fixed;
-    top: 44px;
-    left: 48px;
-    box-shadow: $sombra;
-    
+  position: fixed;
+  top: 44px;
+  left: 48px;
 }
-.en-decriptacion{
-    grid-column: 1/4;
-    grid-row: 2/3;
-    align-content: start;
-    transition: all;
-    transition-duration: 2s;
-    animation-duration: 2s;
-    animation: all;
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
+.en-decriptacion {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  align-content: start;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
 }
-.texto , .textoDesplegado , .encriptacion{
-    &::placeholder {
+.texto,
+.textoDesplegado,
+.encriptacion {
+  &::placeholder {
     color: rgb(96, 211, 96);
-}
-box-shadow: $sombra;
-color: rgb(219, 243, 219);
-padding: 1rem;
+  }
+  text-size-adjust: 100%  ;
+  box-shadow: $sombra;
+  color: rgb(219, 243, 219);
+  padding: 1rem;
   text-align: left;
   width: 30vw;
   max-height: 20vw;
@@ -60,18 +57,16 @@ padding: 1rem;
   display: block;
   border-radius: 1vw;
   resize: vertical;
-  &:focus{
+  &:focus {
     border: none;
   }
 }
 .textoDesplegado {
-    height: 10em;
+  height: 10em;
 }
 
 .botones {
-    
   margin: 5%;
-  background-color: rgba(35, 114, 35, 0.3);
   grid-column: 1/4;
   grid-row: 4;
   display: flex;
@@ -85,15 +80,24 @@ padding: 1rem;
     font-size: 200%;
     min-width: 150px;
     width: 200px;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+    &:hover {
+      box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+      transform: translate(3px, 3px);
+    }
   }
   .encriptar {
     background-color: whitesmoke;
-    &:hover{background-color: rgb(212, 212, 212);}
+    &:hover {
+      background-color: rgb(212, 212, 212);
+    }
     color: rgb(35, 114, 35);
   }
   .desencriptar {
     background-color: rgb(35, 114, 35);
-    &:hover{background-color: rgb(25, 83, 25);}
+    &:hover {
+      background-color: rgb(25, 83, 25);
+    }
     color: whitesmoke;
   }
 }
@@ -104,6 +108,8 @@ padding: 1rem;
   justify-content: center;
   align-self: start;
   gap: 10px;
+  position: relative;
+  top: 10px;
   .textoAclaraciones {
     display: inline-block;
     background-color: black;
@@ -113,7 +119,14 @@ padding: 1rem;
     padding-right: 10px;
     position: relative;
   }
+  &None {
+    img,
+    p {
+      content: none;
+    }
+  }
 }
+
 .sidebar {
   background-color: rgb(35, 114, 35);
   width: auto;
@@ -121,6 +134,7 @@ padding: 1rem;
   grid-column: 4;
   grid-row: 1/5;
   margin: 5%;
+  box-shadow: 10px 10px 0 0 #000;
 }
 
 /*_______________________media_querys__________________________*/
@@ -139,7 +153,13 @@ padding: 1rem;
   .wrapper {
     grid-template-rows: repeat(8, 25vh);
   }
-
+  .texto,
+  .encriptacion {
+    height: 100%;
+    :focus {
+      height: 500px !important;
+    }
+  }
   .sidebar {
     grid-column: 1/5;
     grid-row: 4/6;
@@ -161,6 +181,5 @@ padding: 1rem;
     display: inline-block;
     grid-column: 1/-1;
     grid-row: 1/4;
-}
-
+  }
 }
