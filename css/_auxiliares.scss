@@ -1,7 +1,0 @@
-@mixin box-flex($justificacion, $alineacion, $wrap){
-    display: flex;
-    justify-content: $justificacion;
-    align-items: $alineacion;
-    flex-wrap: $wrap;
-}
-$sombra: rgba(64,67,64,0.4);
