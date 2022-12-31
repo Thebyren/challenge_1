@@ -1,7 +1,7 @@
-css_scss/style.scss
-css_scss/style.css.map
-css_scss/_auxiliares.scss
-css_scss/_desktop.scss
-css_scss/_reset.scss
-css_scss/_tablets.scss
-css_scss/_telefonos.scss
+css/style.scss
+css/style.css.map
+css/_auxiliares.scss
+css/_desktop.scss
+css/_reset.scss
+css/_tablets.scss
+css/_telefonos.scss
