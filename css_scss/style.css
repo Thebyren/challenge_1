@@ -1,32 +1,4 @@
 @charset "UTF-8";
-@media screen and (max-width: 500px) {
-  .sidebar {
-    display: none;
-  }
-  .muñecoAlura {
-    display: none;
-  }
-  body .logoAlura {
-    transform: scale(0.9);
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
-}
-.sidebar {
-  top: 15px;
-  right: 15px;
-  position: absolute;
-  width: 30vh;
-  height: 90vh;
-}
-
-.logoAlura {
-  position: absolute;
-  top: 44px;
-  left: 42px;
-}
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -366,6 +338,54 @@ textarea {
   padding: 0.2em 0;
 }
 
+@media screen and (min-width: 1040px) {
+  .texto {
+    margin-top: 70px;
+  }
+  .sidebar {
+    top: 15px;
+    right: 15px;
+    position: absolute;
+    width: 30vh;
+    height: 90vh;
+  }
+  form {
+    width: 75%;
+    height: 45vh;
+  }
+  .logoAlura {
+    position: absolute;
+    top: 44px;
+    left: 42px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sidebar {
+    display: none;
+  }
+  .muñecoAlura {
+    display: none;
+  }
+  textarea {
+    border-radius: none !important;
+  }
+  body .logoAlura {
+    transform: scale(0.9);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .pieDePagina {
+    font-size: 0.9em;
+    display: block;
+  }
+}
+.logoAlura {
+  position: absolute;
+  top: 44px;
+  left: 42px;
+}
+
 body {
   background-color: #9dd0fa;
 }
@@ -382,15 +402,43 @@ main {
   width: inherit;
 }
 
+.texto {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: none;
+  display: block;
+  color: #fff;
+}
+.texto::-moz-placeholder {
+  color: #bbb;
+}
+.texto:-ms-input-placeholder {
+  color: #bbb;
+}
+.texto::placeholder {
+  color: #bbb;
+}
+
 .sidebar {
   box-sizing: border-box;
   background-color: chocolate;
   border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-button, textarea {
-  border: none;
-}
-button:focus, textarea:focus {
-  border: none;
+.pieDePagina {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 20px;
+  display: block;
+  transform: translateX(-50%);
+  background-color: rgba(57, 131, 150, 0.2);
+  width: 97%;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
