@@ -1,14 +1,10 @@
 $(document).ready(function () {
 
   //---------------------------[funcion reguladora de altura]---------------------------//
-  $('.texto').on('input', function () {
-    $(this).css('height', 'auto')
-    // calcula la altura del textarea y agrega espacio de altura segun la necesidad
-    var height = Math.min(this.scrollHeight, 150)
-    $(this).css('height', height + 'px') // se manipula la altura usando la variable height
+  $('.texto').on('input', function() {
+    $(this).height(0);
+    $(this).height(this.scrollHeight);
   })
-  
-  
   //-------------------------[funcion de monitereo de caracteres]-------------------------//
   $('.texto').on('keydown', function () {
     // Obtiene el valor del textarea y calcula la cantidad de caracteres
