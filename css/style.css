@@ -428,7 +428,7 @@ textarea {
     border-color: #d2691e;
     border-style: solid;
     border-width: 2px 7px 2px 7px;
-    border-radius: 5px;
+    border-radius: 10px;
   }
   .resultado::-webkit-scrollbar-thumb:hover {
     background-color: #bbb;
@@ -437,12 +437,10 @@ textarea {
     border-width: 2px 9px 2px 9px;
     border-style: solid;
     border-color: #d2691e;
+    border-radius: 20px;
   }
   .copiar {
-    background-color: #fff;
-    padding: 10px;
-    font-size: 1.5em;
-    border-radius: 20px;
+    display: none;
   }
   .wrapper {
     display: flex;
@@ -520,6 +518,14 @@ body {
       -ms-user-select: none;
           user-select: none;
   overflow-y: hidden;
+}
+
+*::-moz-selection {
+  background-color: #0a3871;
+}
+
+*::selection {
+  background-color: #0a3871;
 }
 
 .logoAlura {
@@ -611,6 +617,13 @@ body {
 }
 .botones .desencriptar:hover {
   background-color: rgb(220, 220, 235);
+}
+
+.copiar {
+  background-color: #fff;
+  padding: 10px;
+  font-size: 1.5em;
+  border-radius: 20px;
 }
 
 .aviso {

@@ -10,6 +10,10 @@ body {
   background-color: rgba($color: #50b7d1, $alpha: 0.6);
   user-select: none;
   overflow-y: hidden;
+  
+}
+*::selection{
+  background-color: #0a3871;
 }
 
 .logoAlura {
@@ -55,6 +59,7 @@ body {
   background-color: chocolate;
   border-radius: 30px;
   @include box-flex(center, center, wrap);
+  
 }
 .botones-formato {
   width: 300px;
@@ -80,6 +85,12 @@ body {
     @extend .botones-formato;
     &:hover {background-color: rgb(220, 220, 235)}
   }
+}
+.copiar{
+  background-color: #fff;
+  padding: 10px;
+  font-size: 1.5em;
+  border-radius: 20px;
 }
 .aviso{
   display:flex;
