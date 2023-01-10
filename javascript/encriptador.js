@@ -26,14 +26,14 @@ $(document).ready(function () {
     let encriptado = textoEncriptado.join('')
     console.log(encriptado)
     if (encriptado === '') {
-      $('.muñecoAlura').show() // Mostrar el vector
-      $('.sinTexto').show() // Mostrar el texto
-      $('.copiar').hide() // oculta el boton copiar
-      $('.resultado').hide() // Ocultar el texto encriptado
+      $('.contenedorSide').show() // Mostrar el vector
+      $('.contenedorResultado').hide() // Mostrar el boton copiar
+      $('.muñecoAlura').show();
+      $('sintexto').show();
     } else {
-        $('.muñecoAlura').hide() // Oculta el vector
-        $('.sinTexto').hide() // Oculta el texto
-        $('.copiar').show() // Mostrar el boton copiar
+      $('.copiar').show() // oculta el boton copiar
+        $('.contenedorSide').hide() // Oculta el texto
+        $('.contenedorResultado').show() // Mostrar el boton copiar
       $('.resultado').html(encriptado).show() // Muestra el texto encriptado
     }
   })
@@ -45,7 +45,21 @@ $(document).ready(function () {
     seleccion.removeAllRanges();
     seleccion.addRange(rango);
     document.execCommand('copy');
-    // Elimina esta línea:
-    // seleccion.removeAllRanges();
+    $('.copiar').html('copiado <img src="./contenido/clipboard.svg">')
+    $('.copiar').css({
+      backgroundColor: '#00ffbb'
+    });
   });
+  $('.desencriptar').click(()=>{
+    $('.copiar').html('copiar <img src="./contenido/clipboard.svg">')
+    $('.copiar').css({
+      backgroundColor: '#ffffff'
+    });
+  })
+  $('.encriptar').click(()=>{
+    $('.copiar').html('copiar <img src="./contenido/clipboard.svg">')
+    $('.copiar').css({
+      backgroundColor: '#ffffff'
+    });
+  })
 })

@@ -467,7 +467,24 @@ textarea {
     overflow-x: hidden;
   }
   .sidebar {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    margin: 10px;
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    min-height: 4em;
+    padding: 1.4em 1em 1em 1em;
+    box-sizing: content-box;
+  }
+  .sidebar p {
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .sidebar .resultado {
+    min-height: 100px;
+    font-size: 1.4em;
   }
   .muñecoAlura {
     display: none;
@@ -508,6 +525,7 @@ textarea {
   body footer .pieDePagina {
     font-size: 0.9em;
     display: block;
+    bottom: 0px;
   }
 }
 body {
@@ -584,10 +602,22 @@ body {
   box-sizing: border-box;
   background-color: chocolate;
   border-radius: 30px;
+}
+.sidebar .contenedorSide {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+.sidebar .contenedorResultado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
 }
 
 .botones-formato, .botones .desencriptar, .botones .encriptar {
@@ -624,6 +654,8 @@ body {
   padding: 10px;
   font-size: 1.5em;
   border-radius: 20px;
+  width: 100%;
+  margin: 0px 10px 0px 10px;
 }
 
 .aviso {

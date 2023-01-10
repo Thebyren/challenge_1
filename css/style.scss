@@ -58,8 +58,17 @@ body {
   box-sizing: border-box;
   background-color: chocolate;
   border-radius: 30px;
-  @include box-flex(center, center, wrap);
-  
+  .contenedorSide{
+    @include box-flex(center, center, wrap);
+    height: 100%;
+    width: 100%;
+  }
+  .contenedorResultado{
+    @include box-flex(center, center, wrap);
+    height: 100%;
+    width: 100%;
+
+  }
 }
 .botones-formato {
   width: 300px;
@@ -91,6 +100,8 @@ body {
   padding: 10px;
   font-size: 1.5em;
   border-radius: 20px;
+  width: 100%;
+  margin:  0px 10px 0px 10px;
 }
 .aviso{
   display:flex;
