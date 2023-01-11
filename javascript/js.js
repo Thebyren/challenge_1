@@ -1,4 +1,19 @@
 $(document).ready(function () {
+  
+  //----------------------[boton para copiar contenido des/encriptado]----------------------//
+  $('.copiar').click(function() {
+    let resultado = $('.resultado');
+    let seleccion = window.getSelection();
+    let rango = document.createRange();
+    rango.selectNodeContents(resultado[0]);
+    seleccion.removeAllRanges();
+    seleccion.addRange(rango);
+    document.execCommand('copy');
+    $('.copiar').html('copiado <img src="./contenido/clipboard.svg">')
+    $('.copiar').css({
+      backgroundColor: '#00ffbb'
+    });
+  });
 
   //---------------------------[funcion reguladora de altura]---------------------------//
   $('.texto').on('input', function() {

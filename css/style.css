@@ -457,6 +457,8 @@ textarea {
   }
   .pieDePagina {
     font-size: 1.2em;
+    position: absolute;
+    bottom: 0;
   }
 }
 @media screen and (max-width: 500px) {
@@ -475,18 +477,21 @@ textarea {
     max-height: -moz-fit-content;
     max-height: fit-content;
     min-height: 4em;
-    padding: 1.4em 1em 1em 1em;
+    padding: 1em 1em 1em 1em;
     box-sizing: content-box;
   }
   .sidebar p {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.85em;
   }
   .sidebar .resultado {
     min-height: 100px;
     font-size: 1.4em;
+    overflow-wrap: break-word;
+    text-align: center;
+    overflow: hidden;
   }
-  .muñecoAlura {
+  .muñecoAlura, .resultado {
     display: none;
   }
   textarea.texto {
@@ -499,6 +504,9 @@ textarea {
     width: 95%;
     padding: 3%;
   }
+  textarea.texto:focus .footer {
+    display: none;
+  }
   body .logoAlura {
     transform: scale(0.8);
     position: absolute;
@@ -506,9 +514,12 @@ textarea {
     left: 20px;
   }
   html body .botones {
-    box-sizing: border-box;
+    font-weight: bold;
+    gap: 10px;
+    padding: 0.3em;
+    box-sizing: content-box;
     margin-top: 2em;
-    font-size: 1.6em;
+    font-size: 1.7em;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -518,24 +529,20 @@ textarea {
     width: 98%;
   }
   html .aviso {
+    font-weight: bold;
     margin: 10px;
     padding: 5px;
-    font-size: 0.85em;
-  }
-  body footer .pieDePagina {
     font-size: 0.9em;
-    display: block;
-    bottom: 0px;
+  }
+  html body footer .pieDePagina {
+    font-size: 0.9em;
   }
 }
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: rgba(80, 183, 209, 0.6);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   overflow-y: hidden;
+  height: 100%;
 }
 
 *::-moz-selection {
@@ -548,10 +555,18 @@ body {
 
 .logoAlura {
   filter: drop-shadow(3px 3px 0 rgba(64, 67, 64, 0.4));
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .muñecoAlura {
   width: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #texto {
@@ -559,6 +574,10 @@ body {
 }
 
 .contador {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   color: #777;
   display: inline-block;
 }
@@ -656,6 +675,7 @@ body {
   border-radius: 20px;
   width: 100%;
   margin: 0px 10px 0px 10px;
+  display: none;
 }
 
 .aviso {
@@ -671,12 +691,10 @@ body {
 }
 
 .pieDePagina {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
+  left: 0;
+  box-sizing: border-box;
   padding: 10px;
-  transform: translateX(-50%);
   background-color: rgba(57, 131, 150, 0.2);
-  width: 98%;
+  width: 100%;
   text-align: center;
 }/*# sourceMappingURL=style.css.map */

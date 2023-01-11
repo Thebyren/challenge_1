@@ -22,7 +22,9 @@ $(document).ready(function () {
     if (desencriptado === '') {
       $('.contenedorSide').show() // Mostrar el vector
       $('.contenedorResultado').hide() // Mostrar el boton copiar
-      $('.muñecoAlura').show();
+      if (screen.width > 500) {
+        $('.muñecoAlura').show();
+      }
       $('sintexto').show();
     } else {
       $('.copiar').show() // oculta el boton copiar
