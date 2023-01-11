@@ -465,6 +465,11 @@ textarea {
   body {
     padding: 0 10px;
   }
+  main {
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+    min-height: 90vh;
+  }
   html {
     overflow-x: hidden;
   }
