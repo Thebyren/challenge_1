@@ -461,14 +461,101 @@ textarea {
     bottom: 0;
   }
 }
+@media screen and (min-width: 501px) and (max-width: 1039px) {
+  body {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  * {
+    overflow-wrap: break-word;
+    overflow: hidden;
+  }
+  html {
+    overflow-x: hidden;
+    position: relative;
+  }
+  main {
+    min-height: 95vh;
+    flex: 1 auto;
+  }
+  .sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    margin: 10px;
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    min-height: 4em;
+    padding: 1em 1em 1em 1em;
+    box-sizing: content-box;
+  }
+  .sidebar p {
+    text-align: center;
+    font-size: 2.5em;
+  }
+  .sidebar .resultado {
+    min-height: 100px;
+    font-size: 2.4em;
+    text-align: center;
+  }
+  .muñecoAlura, .resultado {
+    display: none;
+  }
+  textarea.texto {
+    margin-right: 2%;
+    border-radius: 10px;
+    font-size: 2.3em;
+    margin-top: 80px;
+    min-height: 1.7em;
+    max-height: auto;
+    width: 95%;
+    padding: 3%;
+  }
+  textarea.texto:focus .footer {
+    display: none;
+  }
+  body .logoAlura {
+    transform: scale(0.8);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  html body .botones {
+    font-weight: bold;
+    gap: 10px;
+    padding: 0.3em;
+    box-sizing: content-box;
+    margin-top: 2em;
+    font-size: 2.3em;
+    font-weight: bold;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: initial;
+  }
+  html body .botones-formato, html body .botones .desencriptar, .botones html body .desencriptar, html body .botones .encriptar, .botones html body .encriptar {
+    width: 98%;
+  }
+  html .aviso {
+    font-weight: bold;
+    width: auto;
+    text-align: center;
+    left: 50%;
+    margin: 14px;
+    padding: 6px;
+    font-size: 1.1em;
+  }
+  html body footer .pieDePagina {
+    font-size: 1.1em;
+    position: absolute;
+    bottom: 0;
+  }
+}
 @media screen and (max-width: 500px) {
   body {
     padding: 0 10px;
-  }
-  main {
-    display: grid;
-    grid-template-rows: 1fr auto auto;
-    min-height: 90vh;
   }
   html {
     overflow-x: hidden;
@@ -541,6 +628,8 @@ textarea {
   }
   html body footer .pieDePagina {
     font-size: 0.9em;
+    -webkit-margin-after: auto;
+            margin-block-end: auto;
   }
 }
 body {
