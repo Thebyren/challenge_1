@@ -1,6 +1,6 @@
 # challenge_1
 
-[previsualizaciones](./contenido/previsualizaciones.jpg)
+![previsualizaciones](./contenido/previsualizaciones.jpg)
 
 > desafio de alura de un deco/encodificador basico en html
 ___ 
